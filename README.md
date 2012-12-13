@@ -1,4 +1,6 @@
-raspbian_lcd_status_daemon
+Raspbian LCD Status Daemon
 ==========================
 
-Raspbian LCD status daemon
+This daemon will run on a Raspbian install and output status information
+to a pcd8544 controlled LCD connected via SPI. This is intended to be
+used with a Nokia 5110 LCD.
