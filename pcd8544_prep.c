@@ -140,18 +140,18 @@ int lcd_print(FILE *output, char *string)
 int main(int argc, char **argv)
 {
 	FILE *out = stdout;
-  FILE *in = stdin;
+	FILE *in = stdin;
 
-  int c = 0;
+	int c = 0;
 
-  lcd_init(out);
+	lcd_init(out);
 
-  while ( !feof(in) ) {
-    c = fgetc(in);
-    if (c != EOF) {
-      lcd_print_char(out, c);
-    }
-  }
+	while ( !feof(in) ) {
+		c = fgetc(in);
+		if (c != EOF) {
+			lcd_print_char(out, c);
+		}
+	}
 
 	return 0;
 }
