@@ -1,9 +1,7 @@
 #!/bin/bash
 
 temp=`vcgencmd measure_temp | cut -d'=' -f2`
-clock_arm=`vcgencmd measure_clock arm | cut -d'=' -f2`
-volts=`vcgencmd measure_volts core | cut -d'=' -f2`
+ip=`ifconfig eth0 | grep inet | cut -d':' -f2 | cut -d' ' -f1`
+time=`date | cut -d' ' -f4`
 
-echo "t: $temp"
-echo "f: $clock_arm"
-echo "v: $volts"
+echo "Time: $time              Temp: $temp                $ip"
