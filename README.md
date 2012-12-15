@@ -7,8 +7,8 @@ used with a Nokia 5110 LCD.
 
 Here's an example of what it prints out to the lcd, updating every 7 seconds or so:
 
-Time: 01:28:07
- Cpu: 8.3 %
- Mem: 82 %
-Temp: 46.5'C
-192.168.1.122
+    Time: 01:28:07
+     Cpu: 8.3 %
+     Mem: 82 %
+    Temp: 46.5'C
+    192.168.1.122
