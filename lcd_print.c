@@ -55,6 +55,7 @@ int contrast = 50;
 int main (void)
 {
 	char line[MAX_LINE_LEN] = {0};
+	int i;
 
 	// check wiringPi setup
 	if (wiringPiSetup() == -1)
@@ -63,11 +64,16 @@ int main (void)
 		exit(1);
 	}
 
-	gets(line);
-
 	LCDInit(_sclk, _din, _dc, _cs, _rst, contrast);
 	LCDclear();
-	LCDdrawstring(0, 0, line);
+	gets(line);
+	for (i = 0; i < 5; i++) {
+		LCDdrawstring(0, i*10, line);
+		gets(line);
+		if (feof(stdin)) {
+			break;
+		}
+	}
 	LCDdisplay();
 }
 
