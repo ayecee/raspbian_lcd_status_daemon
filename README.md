@@ -13,6 +13,10 @@ Here's an example of what it prints out to the lcd, updating every 7 seconds or 
     Temp: 46.5'C
     192.168.1.122
 
+Right now this is split up into a few files:
+* lcd_print - A program that just prints stdin to the lcd. This should be compiled, setuid root, and placed in /usr/sbin.
+* rpi_status.sh - A script that grabs status info and outputs it. This should be placed in /usr/sbin.
+* lcd_status_daemon.sh - A script that just pipes the output from rpi_status.sh into lcd_print and sleeps for 5 seconds. This should be placed in /usr/sbin and added to init.d
 
 WiringPi
 ========
