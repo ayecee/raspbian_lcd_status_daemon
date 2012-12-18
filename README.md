@@ -12,3 +12,14 @@ Here's an example of what it prints out to the lcd, updating every 7 seconds or 
      Mem: 82 %
     Temp: 46.5'C
     192.168.1.122
+
+
+WiringPi
+========
+
+You'll need to [download and install the WiringPi library](https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/) for this to compile.
+
+PCD8544 Library
+===============
+
+PCD8544 library was written by Andrew Wassow, from his post [PCD8544 Library for Raspberry Pi](http://binerry.de/post/25787954149/pcd8544-library-for-raspberry-pi)
