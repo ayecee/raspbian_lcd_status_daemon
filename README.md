@@ -22,4 +22,4 @@ You'll need to [download and install the WiringPi library](https://projects.drog
 PCD8544 Library
 ===============
 
-PCD8544 library was written by Andrew Wassow, from his post [PCD8544 Library for Raspberry Pi](http://binerry.de/post/25787954149/pcd8544-library-for-raspberry-pi)
+PCD8544 library by Andre Wussow, from his post [PCD8544 Library for Raspberry Pi](http://binerry.de/post/25787954149/pcd8544-library-for-raspberry-pi)
