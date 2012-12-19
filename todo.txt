@@ -1,0 +1,9 @@
+To Do
+
+* Add a voltage smoothing cap
+* Re-do switches and make sure they're connected properly
+* Make sure switches are connected to 3.3v
+* Don't go crazy with polygons
+* Use pull up resistors instead of pull downs with switches
+* Flip the switches or the resistors to try and cut down on vias
+* Add silk screen for LCD
