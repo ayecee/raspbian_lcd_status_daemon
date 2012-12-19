@@ -1,2 +1,5 @@
 lcd_print
 *.o
+*.pcb-
+*.sch~
+*.backup
