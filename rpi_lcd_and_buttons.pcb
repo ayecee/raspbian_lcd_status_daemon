@@ -9,7 +9,7 @@ Grid[1000.0 0 0 1]
 Cursor[0 0 0.000000]
 PolyArea[3100.006200]
 Thermal[0.500000]
-DRC[1000 1000 1000 1000 1500 1000]
+DRC[800 800 800 600 1500 1000]
 Flags("nameonpcb,clearnew,snappin")
 Groups("1,c:2,s")
 Styles["Signal,1000,3600,2000,1000:Power,2500,6000,3500,1000:Fat,4000,6000,3500,1000:Skinny,600,2402,1181,600"]
@@ -788,7 +788,7 @@ Symbol['~' 1200]
 )
 Attribute("import::src0" "/home/andrew/raspbian_lcd_status_daemon/rpi_lcd_and_buttons.sch")
 Attribute("PCB::grid::unit" "mil")
-Via[18000 35000 3600 2000 0 2000 "" "auto"]
+Via[10000 35000 4500 2000 0 2000 "" ""]
 
 Element["" "SWITCH_FSMJSM" "S2" "unknown" 30000 120000 -20000 -3000 0 100 ""]
 (
@@ -859,8 +859,8 @@ Element["" "JUMPER8" "lcd top" "unknown" 90000 30000 -4000 5500 0 100 ""]
 	Attribute("manufacturer_part_number" "unknown")
 	Attribute("vendor" "unknown")
 	Attribute("vendor_part_number" "unknown")
-	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,edge2"]
-	Pin[10000 0 6000 3000 6600 3800 "2" "2" "edge2"]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,warn,edge2"]
+	Pin[10000 0 6000 3000 6600 3800 "2" "2" "warn,edge2"]
 	Pin[20000 0 6000 3000 6600 3800 "3" "3" "edge2"]
 	Pin[30000 0 6000 3000 6600 3800 "4" "4" "edge2"]
 	Pin[40000 0 6000 3000 6600 3800 "5" "5" "edge2"]
@@ -884,10 +884,10 @@ Element["" "HEADER26" "rpi" "unknown" 70000 15000 -63000 10000 0 100 ""]
 	Attribute("manufacturer_part_number" "unknown")
 	Attribute("vendor" "unknown")
 	Attribute("vendor_part_number" "unknown")
-	Pin[-60000 5000 7000 6000 7800 4300 "3.3V" "1" "square,edge2"]
+	Pin[-60000 5000 7000 6000 7800 4300 "3.3V" "1" "square,warn,edge2"]
 	Pin[-50000 5000 7000 6000 7800 4300 "GPIO 0 / I2C0 SDA" "3" "edge2"]
 	Pin[-40000 5000 7000 6000 7800 4300 "GPIO 1 / I2C0 SCL" "5" "edge2"]
-	Pin[-30000 5000 7000 6000 7800 4300 "GPIO4" "7" "edge2"]
+	Pin[-30000 5000 7000 6000 7800 4300 "GPIO4" "7" "warn,edge2"]
 	Pin[-20000 5000 7000 6000 7800 4300 "NC" "9" "edge2"]
 	Pin[-10000 5000 7000 6000 7800 4300 "GPIO 17" "11" "edge2"]
 	Pin[0 5000 7000 6000 7800 4300 "GPIO 21" "13" "edge2"]
@@ -899,15 +899,15 @@ Element["" "HEADER26" "rpi" "unknown" 70000 15000 -63000 10000 0 100 ""]
 	Pin[60000 5000 7000 6000 7800 4300 "NC" "25" "edge2"]
 	Pin[-60000 -5000 7000 6000 7800 4300 "5V" "2" "edge2"]
 	Pin[-50000 -5000 7000 6000 7800 4300 "NC" "4" "edge2"]
-	Pin[-40000 -5000 7000 6000 7800 4300 "GND" "6" "edge2"]
+	Pin[-40000 -5000 7000 6000 7800 4300 "GND" "6" "warn,edge2"]
 	Pin[-30000 -5000 7000 6000 7800 4300 "GPIO 14 / UART TXD" "8" "edge2"]
 	Pin[-20000 -5000 7000 6000 7800 4300 "GPIO 15 / UART RXD" "10" "edge2"]
 	Pin[-10000 -5000 7000 6000 7800 4300 "GPIO 18" "12" "edge2"]
 	Pin[0 -5000 7000 6000 7800 4300 "NC" "14" "edge2"]
 	Pin[10000 -5000 7000 6000 7800 4300 "GPIO 23" "16" "edge2"]
-	Pin[20000 -5000 7000 6000 7800 4300 "GPIO 24" "18" "edge2"]
+	Pin[20000 -5000 7000 6000 7800 4300 "GPIO 24" "18" "warn,edge2"]
 	Pin[30000 -5000 7000 6000 7800 4300 "NC" "20" "edge2"]
-	Pin[40000 -5000 7000 6000 7800 4300 "GPIO 25" "22" "edge2"]
+	Pin[40000 -5000 7000 6000 7800 4300 "GPIO 25" "22" "warn,edge2"]
 	Pin[50000 -5000 7000 6000 7800 4300 "GPIO 8 / SPI CE0" "24" "edge2"]
 	Pin[60000 -5000 7000 6000 7800 4300 "GPIO 7 / SPI CE1" "26" "edge2"]
 	ElementLine [65000 -10000 65000 10000 1000]
@@ -932,20 +932,6 @@ Element["" "0805" "C1" "NP" 28000 67000 10143 -3461 0 100 ""]
 	Pad[-3543 -393 -3543 393 5118 2000 5718 "2" "2" "square"]
 	ElementLine [-393 -2755 393 -2755 800]
 	ElementLine [-393 2755 393 2755 800]
-
-	)
-
-Element["" "0805" "R1" "10K" 28000 34000 9764 -3150 0 100 ""]
-(
-	Attribute("device" "RESISTOR")
-	Attribute("manufacturer" "unknown")
-	Attribute("manufacturer_part_number" "unknown")
-	Attribute("vendor" "unknown")
-	Attribute("vendor_part_number" "unknown")
-	Pad[3543 -393 3543 393 5118 2000 5718 "1" "1" "square"]
-	Pad[-3543 -393 -3543 393 5118 2000 5718 "2" "2" "square"]
-	ElementLine [-393 2755 393 2755 800]
-	ElementLine [-393 -2755 393 -2755 800]
 
 	)
 
@@ -1031,6 +1017,20 @@ Element["" "JUMPER8" "lcd bottom" "unknown" 90000 190000 -4000 -12000 0 100 ""]
 	ElementLine [-5000 -5000 5000 -5000 1000]
 
 	)
+
+Element["" "0805" "R1" "10K" 23000 34000 14764 -3150 0 100 ""]
+(
+	Attribute("device" "RESISTOR")
+	Attribute("manufacturer" "unknown")
+	Attribute("manufacturer_part_number" "unknown")
+	Attribute("vendor" "unknown")
+	Attribute("vendor_part_number" "unknown")
+	Pad[3543 -393 3543 393 5118 2000 5718 "1" "1" "square"]
+	Pad[-3543 -393 -3543 393 5118 2000 5718 "2" "2" "square"]
+	ElementLine [-393 2755 393 2755 800]
+	ElementLine [-393 -2755 393 -2755 800]
+
+	)
 Layer(1 "top")
 (
 	Line[30000 5000 5000 5000 1000 2000 "clearline,auto"]
@@ -1046,27 +1046,19 @@ Layer(1 "top")
 	Line[53547 110945 49291 110945 1000 2000 "clearline,auto"]
 	Line[31543 67393 31543 80945 1000 2000 "clearline,auto"]
 	Line[49291 80945 31543 80945 1000 2000 "clearline,auto"]
-	Line[42280 137128 17720 137128 1000 2000 "clearline,auto"]
-	Line[17720 137128 17720 154799 1000 2000 "clearline,auto"]
 	Line[17720 154799 6453 154799 1000 2000 "clearline,auto"]
 	Line[6453 154799 6453 163311 1000 2000 "clearline,auto"]
 	Line[45785 129055 13465 129055 1000 2000 "clearline,auto"]
-	Line[55547 145201 42280 145201 1000 2000 "clearline,auto"]
-	Line[42280 129055 42280 145201 1000 2000 "clearline,auto"]
 	Line[49291 129055 42280 129055 1000 2000 "clearline,auto"]
 	Line[49291 99055 15593 99055 1000 2000 "clearline,auto"]
 	Line[17720 99055 13465 99055 1000 2000 "clearline,auto"]
 	Line[46535 159055 13465 159055 1000 2000 "clearline,auto"]
 	Line[52047 159055 49291 159055 1000 2000 "clearline,auto"]
-	Line[34952 61952 35000 62000 1000 2000 "clearline"]
-	Line[55547 145201 55547 75000 1000 2000 "clearline"]
-	Line[42547 62000 55547 75000 1000 2000 "clearline"]
 	Line[17720 99055 17720 99055 1000 2000 "clearline"]
 	Line[58000 153055 52000 159055 1000 2000 "clearline"]
 	Line[58000 153055 58000 74000 1000 2000 "clearline"]
 	Line[110000 10000 110000 10000 1000 2000 "clearline"]
 	Line[110000 10000 105000 15000 1000 2000 "clearline"]
-	Line[105000 15000 55000 15000 1000 2000 "clearline"]
 	Line[55000 15000 55000 68000 1000 2000 "clearline"]
 	Line[55000 68000 60000 73000 1000 2000 "clearline"]
 	Line[60000 73000 60000 157622 1000 2000 "clearline"]
@@ -1084,37 +1076,21 @@ Layer(1 "top")
 	Line[85000 25000 80000 20000 1000 2000 "clearline"]
 	Line[26000 25000 15000 25000 1000 2000 "clearline"]
 	Line[15000 25000 10000 20000 1000 2000 "clearline"]
-	Line[31543 30543 26000 25000 1000 2000 "clearline"]
 	Line[140000 30000 135000 25000 1000 2000 "clearline"]
 	Line[135000 25000 135000 5000 1000 2000 "clearline"]
 	Line[135000 5000 65000 5000 1000 2000 "clearline"]
 	Line[60000 10000 65000 5000 1000 2000 "clearline"]
-	Line[24457 41543 26500 39500 1000 2000 "clearline"]
-	Line[26500 39500 29500 39500 1000 2000 "clearline"]
-	Line[29500 39500 31500 37500 1000 2000 "clearline"]
-	Line[31500 37500 31500 34043 1000 2000 "clearline"]
-	Line[31500 34043 31543 34000 1000 2000 "clearline"]
-	Line[31543 34000 31543 30543 1000 2000 "clearline"]
-	Line[31543 30543 31500 30500 1000 2000 "clearline"]
 	Line[24500 45043 24457 45000 1000 2000 "clearline"]
 	Line[24457 45000 24457 41543 1000 2000 "clearline"]
 	Line[24457 41543 24500 41500 1000 2000 "clearline"]
 	Line[24457 67000 24457 56500 1000 2000 "clearline"]
 	Line[24457 56500 24500 56457 1000 2000 "clearline"]
 	Line[24500 56457 24500 45043 1000 2000 "clearline"]
-	Line[42547 62000 28000 62000 1000 2000 "clearline"]
-	Line[31543 45000 31543 48457 1000 2000 "clearline"]
-	Line[31543 48457 29500 50500 1000 2000 "clearline"]
-	Line[29500 50500 28000 50500 1000 2000 "clearline"]
-	Line[28000 50500 28000 62000 1000 2000 "clearline"]
 	Line[36000 56414 36043 56457 1000 2000 "clearline"]
 	Line[36043 56457 31586 56457 1000 2000 "clearline"]
 	Line[44000 60000 58000 74000 1000 2000 "clearline"]
 	Line[40000 25000 36000 29000 1000 2000 "clearline"]
 	Line[40000 25000 40000 20000 1000 2000 "clearline"]
-	Line[18000 35000 18000 99055 1000 2000 "clearline"]
-	Line[24457 34000 19000 34000 1000 2000 "clearline"]
-	Line[19000 34000 18000 35000 1000 2000 "clearline"]
 	Line[44000 60000 38000 60000 1000 2000 "clearline"]
 	Line[38000 60000 36000 58000 1000 2000 "clearline"]
 	Line[36000 29000 36000 58000 1000 2000 "clearline"]
@@ -1123,18 +1099,29 @@ Layer(1 "top")
 	Line[6453 81000 6453 80453 1000 2000 "clearline"]
 	Line[6453 80453 5000 79000 1000 2000 "clearline"]
 	Line[5000 79000 5000 5000 1000 2000 "clearline"]
+	Line[18000 43000 10000 35000 1000 2000 "clearline"]
+	Line[10000 35000 18457 35000 1000 2000 "clearline"]
+	Line[18457 35000 19457 34000 1000 2000 "clearline"]
+	Line[26000 25000 26000 33457 1000 2000 "clearline"]
+	Line[26000 33457 26543 34000 1000 2000 "clearline"]
+	Line[26543 34000 26543 39457 1000 2000 "clearline"]
+	Line[24457 41543 26543 39457 1000 2000 "clearline"]
+	Line[18000 43000 18000 99055 1000 2000 "clearline"]
+	Line[105000 15000 35000 15000 1000 2000 "clearline"]
+	Line[35000 15000 35000 25000 1000 2000 "clearline"]
+	Line[35000 25000 32000 28000 1000 2000 "clearline"]
+	Line[32000 28000 32000 44543 1000 2000 "clearline"]
+	Line[32000 44543 31543 45000 1000 2000 "clearline"]
+	Line[17720 154799 17720 129335 1000 2000 "clearline"]
+	Line[17720 129335 18000 129055 1000 2000 "clearline"]
 )
 Layer(2 "bottom")
 (
 	Line[30000 5000 30000 10000 1000 2000 "clearline,auto"]
 	Line[30000 5000 5000 5000 1000 2000 "clearline,auto"]
 	Line[90000 10000 95000 15000 1000 2000 "clearline"]
-	Line[95000 15000 95000 34500 1000 2000 "clearline"]
-	Line[5000 33000 11000 39000 1000 2000 "clearline"]
-	Line[11000 39000 97000 39000 1000 2000 "clearline"]
 	Line[97000 39000 100000 36000 1000 2000 "clearline"]
 	Line[100000 36000 100000 30000 1000 2000 "clearline"]
-	Line[5000 33000 5000 5000 1000 2000 "clearline"]
 	Line[80000 10000 85000 5000 1000 2000 "clearline"]
 	Line[85000 5000 115000 5000 1000 2000 "clearline"]
 	Line[115000 5000 115000 25000 1000 2000 "clearline"]
@@ -1142,14 +1129,20 @@ Layer(2 "bottom")
 	Line[10000 20000 15000 25000 1000 2000 "clearline"]
 	Line[15000 25000 85000 25000 1000 2000 "clearline"]
 	Line[85000 25000 90000 30000 1000 2000 "clearline"]
-	Line[95000 35000 18000 35000 1000 2000 "clearline"]
+	Line[95000 15000 95000 35000 1000 2000 "clearline"]
+	Line[15000 39000 12000 42000 1000 2000 "clearline"]
+	Line[12000 42000 8000 42000 1000 2000 "clearline"]
+	Line[8000 42000 5000 39000 1000 2000 "clearline"]
+	Line[5000 5000 5000 39000 1000 2000 "clearline"]
+	Line[15000 39000 97000 39000 1000 2000 "clearline"]
+	Line[95000 35000 10000 35000 1000 2000 "clearline"]
 )
 Layer(3 "silk")
 (
 )
 Layer(4 "silk")
 (
-	Line[155000 500 155000 196500 600 1200 "clearline"]
+	Line[155000 500 155000 196500 600 1200 "found,clearline"]
 	Text[5000 173000 0 100 "Status LCD r3" "clearline"]
 	Text[4000 166000 0 100 "Raspberry Pi" "clearline"]
 )
